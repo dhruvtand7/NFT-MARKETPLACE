@@ -3,10 +3,16 @@ require("@nomicfoundation/hardhat-toolbox");
 module.exports = {
   solidity: "0.8.20",
   networks: {
+    localhost: {
+      url: "http://127.0.0.1:7545", // Ganache default
+      accounts: [
+        "0x412ecd7364c8e559c553bebaaf5eed4ed55d7efaca740bc2a6e1cc73f75a20b1"
+      ]
+    },
     ganache: {
       url: "http://127.0.0.1:7545", // Ganache default
       accounts: [
-        "0x4f0fe2e084dcaee6590cbfd2656b73b6fde0070193e04dfddd582cfe635b2e05" // without '0x' if it doesn't work, try both
+        "0x412ecd7364c8e559c553bebaaf5eed4ed55d7efaca740bc2a6e1cc73f75a20b1"
       ]
     }
   }

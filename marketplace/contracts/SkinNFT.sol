@@ -14,7 +14,7 @@ contract SkinNFT is ERC721URIStorage, Ownable {
     function mintSkin(address recipient, string memory tokenURI) public onlyOwner returns (uint256) {
         uint256 newItemId = tokenCounter;
         _safeMint(recipient, newItemId);
-        _setTokenURI(newItemId, tokenURI);
+        _setTokenURI(newItemId, tokenURI); // tokenURI is the Pinata CID (e.g., ipfs://<CID>)
         tokenCounter++;
         return newItemId;
     }
